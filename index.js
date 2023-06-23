@@ -1,9 +1,5 @@
-console.log('Hello from index.js');
+const add = require('./add');
 
-const add = (a, b) => {
-    return a + b;
-};
 
-const sum = add(1, 2);
-
-console.log(sum);
+console.log(add(1, 2));
+console.log(add);
