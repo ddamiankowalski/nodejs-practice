@@ -1,2 +1,5 @@
-const batman = require('./batman');
-const superman = require('./superman');
+require('./batman');
+require('./superman');
+
+console.log(__dirname, __filename);
+
