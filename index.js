@@ -1,5 +1,8 @@
-require('./batman');
-require('./superman');
+const SuperHero = require('./superhero');
 
-console.log(__dirname, __filename);
+const s1 = new SuperHero('batman');
+s1.name = 'notBatmn';
 
+const s2 = new SuperHero('superman');
+
+console.log(s1.name, s2.name)
