@@ -1,2 +1,3 @@
-require("./file-module");
+// require("./file-module");
 // require('./buffer-module');
+require("./path-module");
