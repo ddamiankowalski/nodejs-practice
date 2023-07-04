@@ -13,6 +13,13 @@ const writableStream = fs.createWriteStream('./assets/stream-input2.txt');
 
 (async () => {
     for (let i = 0; i < 1e5; i++) {
-        console.log(writableStream.write('Hello world!\n' + 1))
+        if (!writableStream.write('Hello world!\n' + 1)) {
+            console.log('i need to drain');
+            await new Promise(resolve => {
+                writableStream.once('drain', resolve);
+            })
+        } else {
+            console.log('i am ok')
+        }
     }
 })()
